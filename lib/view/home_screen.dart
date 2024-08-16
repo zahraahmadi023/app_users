@@ -1,6 +1,5 @@
 import 'package:app_users/provider/user_provider.dart';
 import 'package:app_users/view/details_screen.dart';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +11,6 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
@@ -20,9 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final controller = Provider.of<UserController>(context);
     return SafeArea(
       child: Scaffold(
-          appBar:
-          AppBar(
-
+          appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 22, 121, 171),
             title: Text(controller.isLoading ? "is loading " : "Users",
                 style: TextStyle(color: Colors.white)),
@@ -49,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ));
                             },
                             child: Card(
-                              elevation: 8,
+                              elevation: 10,
                               child: Row(
                                 children: [
                                   ClipRRect(
